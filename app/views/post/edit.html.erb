@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>여기는 게시물 수정란 입니다</h1>
+	<form action = "/post/update/<%= @post.id %>" method="post">
+		제목 : <input type="text" name="title" value="<%= @post.title %>"><br>
+		내용 : <input type="text" name="content" value="<%= @post.content %>"><br>
+		<input type="submit" value="작성하기"><br>
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	</form>
+</body>
+</html>
